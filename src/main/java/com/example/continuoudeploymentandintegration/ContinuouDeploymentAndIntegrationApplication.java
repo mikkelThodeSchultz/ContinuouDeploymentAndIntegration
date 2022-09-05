@@ -8,6 +8,7 @@ public class ContinuouDeploymentAndIntegrationApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ContinuouDeploymentAndIntegrationApplication.class, args);
+        System.out.println("HelloWorld");
     }
 
 }
