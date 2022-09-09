@@ -28,7 +28,7 @@ public class DogService implements IDog{
 
     @Override
     public Optional<Dog> findById(Long aLong) {
-        return Optional.empty();
+        return repo.findById(aLong);
     }
 
     @Override
