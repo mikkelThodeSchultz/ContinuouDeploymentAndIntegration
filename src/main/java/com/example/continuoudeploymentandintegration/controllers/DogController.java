@@ -23,9 +23,10 @@ public class DogController {
 
 
     @GetMapping("/allDogs")
-    public ResponseEntity<Set<Dog>> getDogs(){
-    return new ResponseEntity<>(dogService.findAll(), HttpStatus.OK);
-
+    //public ResponseEntity<Set<Dog>> getDogs(){
+    //return new ResponseEntity<>(dogService.findAll(), HttpStatus.OK);
+    public String getDogs(){
+    return "index.html";
     }
     @PostMapping("/addDog")
     public ResponseEntity<Dog> addDog(Dog newDog){
