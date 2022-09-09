@@ -20,8 +20,10 @@ public class DogController {
     }
 
     @GetMapping("https://continuouldeploymentandintegration.azurewebsites.net/getAllDogs")
-    public ResponseEntity<Set<Dog>> getDogs(){
-    return new ResponseEntity<>(dogService.findAll(), HttpStatus.OK);
+    //public ResponseEntity<Set<Dog>> getDogs(){
+    public String getDogs(){
+        return "index.html";
+    //return new ResponseEntity<>(dogService.findAll(), HttpStatus.OK);
 
     }
     @PostMapping("/addDog")
