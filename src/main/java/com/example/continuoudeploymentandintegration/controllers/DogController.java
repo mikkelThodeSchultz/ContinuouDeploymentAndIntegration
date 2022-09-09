@@ -19,9 +19,10 @@ public class DogController {
         this.dogService = dogService;
     }
 
-    @GetMapping("/https://continuouldeploymentandintegration.azurewebsites.net/getAllDogs")
+    @GetMapping("https://continuouldeploymentandintegration.azurewebsites.net/getAllDogs")
     public ResponseEntity<Set<Dog>> getDogs(){
     return new ResponseEntity<>(dogService.findAll(), HttpStatus.OK);
+
     }
     @PostMapping("/addDog")
     public ResponseEntity<Dog> addDog(Dog newDog){
