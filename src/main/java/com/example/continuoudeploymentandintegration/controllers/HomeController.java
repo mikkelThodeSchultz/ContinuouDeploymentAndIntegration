@@ -8,6 +8,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String index (){
+        System.out.println("Test linje 11");
         return "index.html";
     }
 }
