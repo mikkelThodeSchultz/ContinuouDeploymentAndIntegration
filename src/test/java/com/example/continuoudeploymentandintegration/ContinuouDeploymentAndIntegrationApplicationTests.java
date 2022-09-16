@@ -11,3 +11,5 @@ class ContinuouDeploymentAndIntegrationApplicationTests {
     }
 
 }
+
+// Test skal udkommenteres ellers så brokker maven sig når man pusher det
