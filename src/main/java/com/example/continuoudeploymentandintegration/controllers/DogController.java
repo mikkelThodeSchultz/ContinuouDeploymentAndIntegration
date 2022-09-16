@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Set;
 
 @RestController
-
 public class DogController {
 
     private DogService dogService;
@@ -20,13 +19,10 @@ public class DogController {
         this.dogService = dogService;
     }
 
+    @GetMapping("/dogs")
+    public ResponseEntity<Set<Dog>> getDogs(){
+    return new ResponseEntity<>(dogService.findAll(), HttpStatus.OK);
 
-
-    @GetMapping("/allDogs")
-    //public ResponseEntity<Set<Dog>> getDogs(){
-    //return new ResponseEntity<>(dogService.findAll(), HttpStatus.OK);
-    public String getDogs(){
-    return "index.html";
     }
     @PostMapping("/addDog")
     public ResponseEntity<Dog> addDog(Dog newDog){
